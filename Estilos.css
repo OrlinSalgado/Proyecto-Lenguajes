@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    background-color: #2dc27a;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+.subtitulo {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.tarjeta {
+    background-color: white;
+    color: #2D2DC2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.tarjeta img {
+    width: 80px;
+    height: auto;
+    margin-bottom: 10px;
+}
+.tarjeta h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.boton {
+    display: inline-block;
+    background-color: #FF5A5F;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 30px;
+    font-weight: bold;
+}
