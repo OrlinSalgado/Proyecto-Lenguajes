@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto lenguajes de programacion</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Circulo</h1>
+    <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
+    
+    <div class="contenedor">
+        <div class="tarjeta" onclick="mostrarFormulario('areaCirculo')">
+            <div class="figura circulo"></div>
+            <h3 class="titulo">Area de un circulo</h3>
+            <div id="formularioAreaCirculo" class="formulario">
+                <label for="radio">Ingrese el Radio:</label>
+                <input type="number" id="radio" class="imput">
+                <button class="boton" onclick="calcularArea('circulo')">Calcular</button>
+                <p class="titulo" id="resultado"></p>
+            </div>
+        </div>
+        <div class="tarjeta">
+            <div class="figura circulo"></div>
+            <h3 class="titulo">Perimetro de un circulo</h3>
+        </div>
+       
+    </div>
+    
+    <script src="Funciones.js"></script> 
+</body>
+</html>
