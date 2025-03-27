@@ -29,7 +29,21 @@ function mostrarFormulario(tipo) {
   else if(tipo=='perimetroTrianguloIsosceles'){
     document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "block";
   }
+  else if(tipo=='areaTrianguloEquilatero'){
+    document.getElementById("formularioAreaTrianguloEquilatero").style.display = "block";
+  }
+  else if(tipo=='perimetroTrianguloEquilatero'){
+    document.getElementById("formularioPerimetroTrianguloEquilatero").style.display = "block";
+  }
+  else if(tipo=='areaTrianguloEscaleno'){
+    document.getElementById("formularioAreaTrianguloEscaleno").style.display = "block";
+  }
+  else if(tipo=='perimetroTrianguloEscaleno'){
+    document.getElementById("formularioPerimetroTrianguloEscaleno").style.display = "block";
+  }
 }
+
+
 function ocultarFormulario(tipo) {
   if(tipo=='areaCirculo'){
     document.getElementById("formularioAreaCirculo").style.display = "none";
@@ -60,6 +74,18 @@ function ocultarFormulario(tipo) {
   }
   else if (tipo=='perimetroTrianguloIsosceles') {
     document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "none";
+  }
+  else if (tipo=='areaTrianguloEquilatero') {
+    document.getElementById("formularioAreaTrianguloEquilatero").style.display = "none";
+  }
+  else if (tipo=='perimetroTrianguloEquilatero') {
+    document.getElementById("formularioPerimetroTrianguloEquilatero").style.display = "none";
+  }
+  else if (tipo=='areaTrianguloEscaleno') {
+    document.getElementById("formularioAreaTrianguloEscaleno").style.display = "none";
+  }
+  else if (tipo=='perimetroTrianguloEscaleno') {
+    document.getElementById("formularioPerimetroTrianguloEscaleno").style.display = "none";
   }
 }
 
@@ -112,6 +138,33 @@ function calcularArea(tipo) {
         let areaTrianguloIsosceles = (alturaTrianguloIsosceles*baseTrianguloIsosceles)/2;
         document.getElementById("resultadoAreaTrianguloIsosceles").innerHTML = "El Area es: " + areaTrianguloIsosceles.toFixed(2);
     }    
+  }
+  else if(tipo=='triangulo-Equilatero'){
+    let lado = document.getElementById("ladoAreaTrianguloEquilatero").value;
+    
+    lado = Number(lado);
+    
+    if (isNaN(lado)) {
+        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+    }
+    else {
+        let areaTrianguloEquilatero = (Math.sqrt(3)/4)*Math.pow(lado, 2);
+        document.getElementById("resultadoAreaTrianguloEquilatero").innerHTML = "El Area es: " + areaTrianguloEquilatero.toFixed(2);
+    }  
+  }
+  else if(tipo=='triangulo-Escaleno'){
+    let alturaTrianguloEscaleno = document.getElementById("alturaTrianguloEscaleno").value;
+    let baseTrianguloEscaleno = document.getElementById("baseTrianguloEscaleno").value;
+    
+    alturaTrianguloEscaleno = Number(alturaTrianguloEscaleno);
+    baseTrianguloEscaleno = Number(baseTrianguloEscaleno);
+
+    if (isNaN(alturaTrianguloEscaleno) || isNaN(baseTrianguloEscaleno)) {
+        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+    } else {
+        let areaTrianguloEscaleno = (alturaTrianguloEscaleno*baseTrianguloEscaleno)/2;
+        document.getElementById("resultadoAreaTrianguloEscaleno").innerHTML = "El Area es: " + areaTrianguloEscaleno.toFixed(2);
+    }
   }
 }
 
@@ -167,4 +220,60 @@ function calcularPerimetro(tipo){
         document.getElementById("resultadoPerimetroTrianguloIsosceles").innerHTML = "El Perimetro es: " + perimetroTrianguloIsosceles.toFixed(2);
     }    
   }
+  else if(tipo=='triangulo-Equilatero'){
+    let lado = document.getElementById("ladoPerimetroTrianguloEquilatero").value;
+    
+    lado = Number(lado);
+    
+    if (isNaN(lado)) {
+        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+    }
+    else {
+        let perimetroTrianguloEquilatero = 3*lado;
+        document.getElementById("resultadoPerimetroTrianguloEquilatero").innerHTML = "El Perimetro es: " + perimetroTrianguloEquilatero.toFixed(2);
+    }  
+  }
+  else if(tipo=='triangulo-Escaleno'){
+    let ladoA = document.getElementById("ladoATrianguloEscaleno").value;
+    let ladoB = document.getElementById("ladoBTrianguloEscaleno").value;
+    let ladoC = document.getElementById("ladoCTrianguloEscaleno").value;
+    
+    ladoA = Number(ladoA);
+    ladoB = Number(ladoB);
+    ladoC = Number(ladoC);
+    
+    if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+    }
+    else {
+        let perimetroTrianguloEscaleno = ladoA + ladoB + ladoC;
+        document.getElementById("resultadoPerimetroTrianguloEscaleno").innerHTML = "El Perimetro es: " + perimetroTrianguloEscaleno.toFixed(2);
+    }  
+  }
 }
+
+function crearBotonesNavegacion() {
+  if (!window.location.pathname.includes('Index.html')) {
+      const contenedor = document.createElement('div');
+      contenedor.className = 'contenedor-flechas';
+      
+      // Botón "Atrás"
+      const flechaAtras = document.createElement('div');
+      flechaAtras.className = 'flecha-atras';
+      flechaAtras.title = 'Volver atrás';
+      flechaAtras.innerHTML = '<i class="fas fa-arrow-left"></i>';
+      flechaAtras.onclick = () => history.back();
+      
+      // Botón "Inicio"
+      const flechaInicio = document.createElement('a');
+      flechaInicio.className = 'flecha-inicio';
+      flechaInicio.href = 'Index.html';
+      flechaInicio.title = 'Volver al inicio';
+      flechaInicio.innerHTML = '<i class="fas fa-home"></i>';
+      
+      contenedor.append(flechaAtras, flechaInicio);
+      document.body.prepend(contenedor);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', crearBotonesNavegacion);

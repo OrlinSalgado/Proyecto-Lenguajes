@@ -154,7 +154,7 @@ input {
     width: 80%;
     padding: 8px;
     margin-top: 5px;
-    border: 2px solid #36b37e;
+    border: 2px solid #0b6841;
     border-radius: 10px;
     outline: none;
     text-align: center;
@@ -170,4 +170,45 @@ input:focus {
     width: 30px;
     height: auto;
     margin-bottom: 10px;
+}
+
+/* Contenedor */
+.contenedor-flechas {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
+}
+
+/* Estilos base para ambos botones */
+.flecha-atras, .flecha-inicio {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    color: rgb(212, 194, 31);
+    font-size: 20px;
+}
+
+/* Flecha Atrás */
+.flecha-atras {
+    background: #000000;
+}
+
+/* Casa Inicio */
+.flecha-inicio {
+    background: #000000;
+}
+
+/* Efecto hover */
+.flecha-atras:hover, .flecha-inicio:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
 }
