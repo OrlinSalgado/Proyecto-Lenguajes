@@ -27,3 +27,10 @@ function calcularArea(tipo) {
     document.getElementById("resultadoAreaRectangulo").innerHTML = "El Área es: " + areaRectangulo.toFixed(2);
   }
 }
+function calcularPerimetro(tipo){
+  if (tipo == 'circulo'){
+    let radio = document.getElementById("radio").value;
+    let perimetro = 2*(Math.PI * radio);
+    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
+  }
+}
