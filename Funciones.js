@@ -32,7 +32,7 @@ function calcularArea(tipo) {
 }
 function calcularPerimetro(tipo){
   if (tipo == 'circulo'){
-    let radio = document.getElementById("radio").value;
+    let radio = document.getElementById("radio1").value;
     let perimetro = 2*(Math.PI * radio);
     document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
   }
