@@ -37,7 +37,12 @@ function ocultarFormulario(tipo) {
   else if (tipo=='perimetroTRectangulo') {
     document.getElementById("formularioPerimetroTRectangulo").style.display = "none";
   }
-  
+  else if (tipo=='areaRectangulo') {
+    document.getElementById("formularioAreaRectangulo").style.display = "none";
+  }
+  else if (tipo=='perimetroRectangulo') {
+    document.getElementById("formularioPerimetroRectangulo").style.display = "none";
+  }
 }
 
 function calcularArea(tipo) {
