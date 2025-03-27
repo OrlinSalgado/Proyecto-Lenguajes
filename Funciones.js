@@ -43,6 +43,12 @@ function calcularArea(tipo) {
     let area = Math.PI * Math.pow(radio, 2);
     document.getElementById("resultadoAreaCirculo").innerHTML = "El Área es: " + area.toFixed(2);
   }
+  else if(tipo == 'rombo'){
+    let altura = document.getElementById("alturaRombo").value;
+    let lado = document.getElementById("ladoRombo").value;
+    let areaRombo = altura*lado;
+    document.getElementById("resultado").innerHTML = "El Área es: " + areaRombo.toFixed(2);
+  }
   else if(tipo == 'rectangulo'){
     let altura = document.getElementById("alturaRectangulo").value;
     let ancho = document.getElementById("anchoRectangulo").value;
@@ -50,7 +56,8 @@ function calcularArea(tipo) {
     document.getElementById("resultadoAreaRectangulo").innerHTML = "El Área es: " + areaRectangulo.toFixed(2);
   }
 }
-function calcularPerimetro(tipo) {
+
+function calcularPerimetro(tipo){
   if (tipo == 'circulo') {
     let radio = document.getElementById("radioPerimetro").value;
     if (radio <= 0) {
@@ -59,20 +66,6 @@ function calcularPerimetro(tipo) {
     }
     let perimetro = 2 * Math.PI * radio;
     document.getElementById("resultadoPerimetroCirculo").innerHTML = "El Perímetro es: " + perimetro.toFixed(2);
-  }
-}
-  else if(tipo == 'rombo'){
-    let altura = document.getElementById("alturaRombo").value;
-    let lado = document.getElementById("ladoRombo").value;
-    let areaRombo = altura*lado;
-    document.getElementById("resultado").innerHTML = "El Área es: " + areaRombo.toFixed(2);
-  }
-}
-function calcularPerimetro(tipo){
-  if (tipo == 'circulo'){
-    let radio = document.getElementById("radio1").value;
-    let perimetro = 2*(Math.PI * radio);
-    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
   }
   else if(tipo == 'rectangulo'){
     let altura = document.getElementById("alturaRectangulo1").value;
