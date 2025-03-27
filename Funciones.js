@@ -8,6 +8,9 @@ function mostrarFormulario(tipo) {
   if(tipo=='areaCirculo'){
     document.getElementById("formularioAreaCirculo").style.display = "block";
   }
+  else if(tipo=='perimetroCirculo'){
+    document.getElementById("formularioPerimetroCirculo").style.display = "block";
+  }
   else if(tipo=='areaRectangulo'){
     document.getElementById("formularioAreaRectangulo").style.display = "block";
   }
