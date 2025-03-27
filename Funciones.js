@@ -17,6 +17,12 @@ function mostrarFormulario(tipo) {
   else if(tipo=='perimetroRectangulo'){
     document.getElementById("formularioPerimetroRectangulo").style.display = "block";
   }
+  else if(tipo=='areaRombo'){
+    document.getElementById("formularioAreaRombo").style.display = "block";
+  } 
+  else if(tipo=='perimetroRombo'){
+    document.getElementById("formularioPerimetroRombo").style.display = "block";
+  } 
 }
 
 function calcularArea(tipo) {
@@ -30,6 +36,12 @@ function calcularArea(tipo) {
     let ancho = document.getElementById("anchoRectangulo").value;
     let areaRectangulo = altura*ancho;
     document.getElementById("resultadoAreaRectangulo").innerHTML = "El Área es: " + areaRectangulo.toFixed(2);
+  }
+  else if(tipo == 'rombo'){
+    let altura = document.getElementById("alturaRombo").value;
+    let lado = document.getElementById("ladoRombo").value;
+    let areaRombo = altura*lado;
+    document.getElementById("resultado").innerHTML = "El Área es: " + areaRombo.toFixed(2);
   }
 }
 function calcularPerimetro(tipo){
@@ -45,5 +57,10 @@ function calcularPerimetro(tipo){
     ancho = Number(ancho);
     let perimetroRectangulo = 2*(altura+ancho);
     document.getElementById("resultadoPerimetroRectangulo").innerHTML = "El Perimetro es: " + perimetroRectangulo.toFixed(2);
+  }
+  else if (tipo == 'rombo'){
+    let lado = document.getElementById("ladoRombo1").value;
+    let perimetro = 4*lado;
+    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
   }
 }
