@@ -14,7 +14,9 @@ function mostrarFormulario(tipo) {
   else if(tipo=='areaRectangulo'){
     document.getElementById("formularioAreaRectangulo").style.display = "block";
   }
-  
+  else if(tipo=='perimetroRectangulo'){
+    document.getElementById("formularioPerimetroRectangulo").style.display = "block";
+  }
 }
 
 function calcularArea(tipo) {
@@ -35,5 +37,13 @@ function calcularPerimetro(tipo){
     let radio = document.getElementById("radio1").value;
     let perimetro = 2*(Math.PI * radio);
     document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
+  }
+  else if(tipo == 'rectangulo'){
+    let altura = document.getElementById("alturaRectangulo1").value;
+    let ancho = document.getElementById("anchoRectangulo1").value;
+    altura = Number(altura);
+    ancho = Number(ancho);
+    let perimetroRectangulo = 2*(altura+ancho);
+    document.getElementById("resultadoPerimetroRectangulo").innerHTML = "El Perimetro es: " + perimetroRectangulo.toFixed(2);
   }
 }
