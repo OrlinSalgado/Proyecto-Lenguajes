@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto lenguajes de programacion</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Triángulo Rectángulo</h1>
+    <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
+    
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h3 class="titulo">Area de un Triángulo Rectángulo</h3>
+            <img src="Img/Trectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('areaTRectangulo')">
+            <div id="formularioAreaTRectangulo" class="formulario">
+                <div>
+                    <label for="altura">Ingrese el Cateto 1 (h):</label>
+                    <input type="number" id="cateto_1" class="imput">
+                </div>
+                <div>
+                    <label for="altura">Ingrese el Cateto 2 (b):</label>
+                    <input type="number" id="cateto_2" class="imput">
+                </div>
+                <button class="boton" onclick="calcularArea('Trectangulo')">Calcular</button>
+                <p class="titulo" id="AreaTRectangulo"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('areaTRectangulo')">
+            </div>
+        </div>
+        <div class="tarjeta">   
+            <h3 class="titulo">Perimetro de un Triángulo Rectángulo</h3>
+            <img src="Img/PerimetroTrectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('perimetroTRectangulo')">
+            <div id="formularioPerimetroTRectangulo" class="formulario">
+                <div>
+                    <label for="altura">Ingrese el Cateto 1 (h):</label>
+                    <input type="number" id="cateto1" class="imput">
+                </div>
+                <div>
+                    <label for="altura">Ingrese el Cateto 2 (b):</label>
+                    <input type="number" id="cateto2" class="imput">
+                </div>
+                <button class="boton" onclick="calcularPerimetro('Trectangulo')">Calcular</button>
+                <p class="titulo" id="PerimetroTRectangulo"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetroTRectangulo')">
+            </div>
+        </div>
+       
+    </div>
+    
+    <script src="Funciones.js"></script> 
+</body>
+</html>
