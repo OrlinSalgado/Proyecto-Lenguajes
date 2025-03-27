@@ -22,11 +22,16 @@
                 <p class="titulo" id="resultado"></p>
             </div>
         </div>
-        <div class="tarjeta">
+        <div class="tarjeta" onclick="mostrarFormulario('perimetroCirculo')">
             <div class="figura circulo"></div>
             <h3 class="titulo">Perimetro de un circulo</h3>
+            <div id="formularioPerimetroCirculo" class="formulario">
+                <label for="radio">Ingrese el Radio:</label>
+                <input type="number" id="radio" class="imput">
+                <button class="boton" onclick="calcularPerimetro('circulo')">Calcular</button>
+                <p class="titulo" id="resultado1"></p>
+            </div>
         </div>
-       
     </div>
     
     <script src="Funciones.js"></script> 
