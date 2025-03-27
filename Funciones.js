@@ -1,9 +1,3 @@
-function calTriangulo (base, altura, ladoA, ladoB) {
-  const area = (base*altura)/2;
-  const perimetro = parseFloat(base) + parseFloat(ladoA) + parseFloat(ladoB);
-  return {area, perimetro};
-}
-
 function mostrarFormulario(tipo) {
   if(tipo=='areaCirculo'){
     document.getElementById("formularioAreaCirculo").style.display = "block";
@@ -23,6 +17,12 @@ function mostrarFormulario(tipo) {
   else if(tipo=='perimetroRombo'){
     document.getElementById("formularioPerimetroRombo").style.display = "block";
   } 
+  else if(tipo=='areaTRectangulo'){
+    document.getElementById("formularioAreaTRectangulo").style.display = "block";
+  }
+  else if(tipo=='perimetroTRectangulo'){
+    document.getElementById("formularioPerimetroTRectangulo").style.display = "block";
+  }
 }
 function ocultarFormulario(tipo) {
   if(tipo=='areaCirculo'){
@@ -30,6 +30,12 @@ function ocultarFormulario(tipo) {
   }
   else if (tipo=='perimetroCirculo') {
     document.getElementById("formularioPerimetroCirculo").style.display = "none";
+  }
+  else if (tipo=='areaTRectangulo') {
+    document.getElementById("formularioAreaTRectangulo").style.display = "none";
+  }
+  else if (tipo=='perimetroTRectangulo') {
+    document.getElementById("formularioPerimetroTRectangulo").style.display = "none";
   }
   else if (tipo=='areaRectangulo') {
     document.getElementById("formularioAreaRectangulo").style.display = "none";
@@ -61,6 +67,20 @@ function calcularArea(tipo) {
     let areaRectangulo = altura*ancho;
     document.getElementById("resultadoAreaRectangulo").innerHTML = "El Área es: " + areaRectangulo.toFixed(2);
   }
+  else if(tipo=='Trectangulo'){
+    let cateto1 = document.getElementById("cateto_1").value;
+    let cateto2 = document.getElementById("cateto_2").value;
+    
+    cateto1 = Number(cateto1);
+    cateto2 = Number(cateto2);
+    
+    if (isNaN(cateto1) || isNaN(cateto2)) {
+        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+    } else {
+        let areaTr = (cateto1*cateto2)/2;
+        document.getElementById("AreaTRectangulo").innerHTML = "El Area es: " + areaTr.toFixed(2);
+    }    
+  }
 }
 
 function calcularPerimetro(tipo){
@@ -85,5 +105,20 @@ function calcularPerimetro(tipo){
     let lado = document.getElementById("ladoRombo1").value;
     let perimetro = 4*lado;
     document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
+  }
+  else if(tipo=='Trectangulo'){
+    let cateto1 = document.getElementById("cateto1").value;
+    let cateto2 = document.getElementById("cateto2").value;
+    
+    cateto1 = Number(cateto1);
+    cateto2 = Number(cateto2);
+    
+    if (isNaN(cateto1) || isNaN(cateto2)) {
+        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+    } else {
+        let c = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+        let perimetroTr = cateto1 + cateto2 + c;
+        document.getElementById("PerimetroTRectangulo").innerHTML = "El Perímetro es: " + perimetroTr.toFixed(2);
+    }    
   }
 }
