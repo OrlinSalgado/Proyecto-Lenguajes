@@ -23,6 +23,12 @@ function mostrarFormulario(tipo) {
   else if(tipo=='perimetroTRectangulo'){
     document.getElementById("formularioPerimetroTRectangulo").style.display = "block";
   }
+  else if(tipo=='areaTrianguloIsosceles'){
+    document.getElementById("formularioAreaTrianguloIsosceles").style.display = "block";
+  }
+  else if(tipo=='perimetroTrianguloIsosceles'){
+    document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "block";
+  }
 }
 function ocultarFormulario(tipo) {
   if(tipo=='areaCirculo'){
@@ -42,6 +48,18 @@ function ocultarFormulario(tipo) {
   }
   else if (tipo=='perimetroRectangulo') {
     document.getElementById("formularioPerimetroRectangulo").style.display = "none";
+  }
+  else if (tipo=='areaRombo') {
+    document.getElementById("formularioAreaRombo").style.display = "none";
+  }
+  else if (tipo=='perimetroRombo') {
+    document.getElementById("formularioPerimetroRombo").style.display = "none";
+  }
+  else if (tipo=='areaTrianguloIsosceles') {
+    document.getElementById("formularioAreaTrianguloIsosceles").style.display = "none";
+  }
+  else if (tipo=='perimetroTrianguloIsosceles') {
+    document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "none";
   }
 }
 
@@ -79,6 +97,20 @@ function calcularArea(tipo) {
     } else {
         let areaTr = (cateto1*cateto2)/2;
         document.getElementById("AreaTRectangulo").innerHTML = "El Area es: " + areaTr.toFixed(2);
+    }    
+  }
+  else if(tipo=='triangulo-Isosceles'){
+    let alturaTrianguloIsosceles = document.getElementById("alturaTrianguloIsosceles").value;
+    let baseTrianguloIsosceles = document.getElementById("baseTrianguloIsosceles").value;
+    
+    alturaTrianguloIsosceles = Number(alturaTrianguloIsosceles);
+    baseTrianguloIsosceles = Number(baseTrianguloIsosceles);
+    
+    if (isNaN(alturaTrianguloIsosceles) || isNaN(alturaTrianguloIsosceles)) {
+        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+    } else {
+        let areaTrianguloIsosceles = (alturaTrianguloIsosceles*baseTrianguloIsosceles)/2;
+        document.getElementById("resultadoAreaTrianguloIsosceles").innerHTML = "El Area es: " + areaTrianguloIsosceles.toFixed(2);
     }    
   }
 }
@@ -119,6 +151,20 @@ function calcularPerimetro(tipo){
         let c = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
         let perimetroTr = cateto1 + cateto2 + c;
         document.getElementById("PerimetroTRectangulo").innerHTML = "El Perímetro es: " + perimetroTr.toFixed(2);
+    }    
+  }
+  else if(tipo=='triangulo-Isosceles'){
+    let ladoATrianguloIsosceles = document.getElementById("ladoATrianguloIsosceles").value;
+    let ladoBTrianguloIsosceles = document.getElementById("ladoBTrianguloIsosceles").value;
+    
+    ladoATrianguloIsosceles = Number(ladoATrianguloIsosceles);
+    ladoBTrianguloIsosceles = Number(ladoBTrianguloIsosceles);
+    
+    if (isNaN(ladoATrianguloIsosceles) || isNaN(ladoBTrianguloIsosceles)) {
+        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+    } else {
+        let perimetroTrianguloIsosceles = 2*(ladoATrianguloIsosceles) + (ladoBTrianguloIsosceles);
+        document.getElementById("resultadoPerimetroTrianguloIsosceles").innerHTML = "El Perimetro es: " + perimetroTrianguloIsosceles.toFixed(2);
     }    
   }
 }

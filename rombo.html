@@ -12,9 +12,9 @@
     <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
     
     <div class="contenedor">
-        <div class="tarjeta" onclick="mostrarFormulario('areaRombo')">
-            <div class="figura rombo"></div>
+        <div class="tarjeta">
             <h3 class="titulo">Área de un rombo</h3>
+            <img src="Img/area-rombo.jpg" alt="ÁreaRombo" class="tarjetaImg" onclick="mostrarFormulario('areaRombo')">
             <div id="formularioAreaRombo" class="formulario">
                 <div>
                     <label for="altura">Ingrese la altura(h):</label>
@@ -26,16 +26,18 @@
                 </div>
                 <button class="boton" onclick="calcularArea('rombo')">Calcular</button>
                 <p class="titulo" id="resultado"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('areaRombo')">
             </div>
         </div>
-        <div class="tarjeta" onclick="mostrarFormulario('perimetroRombo')">
-            <div class="figura rombo"></div>
+        <div class="tarjeta">            
             <h3 class="titulo">Perimetro de un rombo</h3>
+            <img src="Img/rombo_perimetro.png" alt="PerimetroRombo" class="tarjetaImg" onclick="mostrarFormulario('perimetroRombo')">
             <div id="formularioPerimetroRombo" class="formulario">
                 <label for="altura">Ingrese el lado (a):</label>
                 <input type="number" id="ladoRombo1" class="imput">
                 <button class="boton" onclick="calcularPerimetro('rombo')">Calcular</button>
                 <p class="titulo" id="resultado1"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetroRombo')">
             </div>
         </div>
        
