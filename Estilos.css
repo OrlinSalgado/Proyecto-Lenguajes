@@ -86,6 +86,33 @@ h1 {
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
     margin-bottom: 10px;
 }
+.triangulo-Isosceles {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid #164d72;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    margin-bottom: 10px;
+}
+.triangulo-Equilatero {
+    width: 0;
+    height: 0;
+    border-left: 70px solid transparent;
+    border-right: 70px solid transparent;
+    border-bottom: 70px solid #14a7b4;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    margin-bottom: 10px;
+}
+.triangulo-Escaleno {
+    width: 0;
+    height: 0;
+    border-left: 80px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 120px solid #166d6a;
+    filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.3));
+    margin-bottom: 10px;
+}
 .circulo {
     width: 100px;
     height: 100px;

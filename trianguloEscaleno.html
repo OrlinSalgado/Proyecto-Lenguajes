@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>proyecto lenguajes de programacion</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Triángulo Escaleno</h1>
+    <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
+    
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h3 class="titulo">Area de un triángulo escaleno</h3>
+            <img src="Img/IMG.png" alt="AreaTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('areaTrianguloEscaleno')">
+            
+            <div id="formularioAreaTrianguloEscaleno" class="formulario">
+                <div>
+                    <label for="altura">Ingrese la Altura(h):</label>
+                    <input type="number" id="alturaTrianguloEscaleno" class="imput">
+                </div>
+                <div>
+                    <label for="altura">Ingrese el Base (b):</label>
+                    <input type="number" id="baseTrianguloEscaleno" class="imput">
+                </div>
+                <button class="boton" onclick="calcularArea('triangulo-Escaleno')">Calcular</button>
+                <p class="titulo" id="resultadoAreaTrianguloEscaleno"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('areaTrianguloEscaleno')">
+            </div>
+        </div>
+        <div class="tarjeta">
+            <h3 class="titulo">Perimetro de un triángulo escaleno</h3>
+            <img src="Img/IMG.png" alt="PerimetroTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('perimetroTrianguloEscaleno')">
+            
+            <div id="formularioPerimetroTrianguloEscaleno" class="formulario">
+                <div>
+                    <label for="altura">Ingrese la LadoA(LA):</label>
+                    <input type="number" id="LadoATrianguloIsosceles" class="imput">
+                </div>
+                <div>
+                    <label for="altura">Ingrese el LadoB(LB):</label>
+                    <input type="number" id="LadoBTrianguloIsosceles" class="imput">
+                </div><div>
+                    <label for="altura">Ingrese la LadoC(LC):</label>
+                    <input type="number" id="LadoCTrianguloIsosceles" class="imput">
+                </div>
+                <button class="boton" onclick="calcularArea('triangulo-Escaleno')">Calcular</button>
+                <p class="titulo" id="resultadoPerimetroTrianguloEscaleno"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetroTrianguloEscaleno')">
+            </div>
+        </div>
+    </div>
+    
+    <script src="Funciones.js"></script> 
+</body>
+</html>
