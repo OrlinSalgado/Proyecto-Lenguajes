@@ -6,25 +6,35 @@
     <title>proyecto lenguajes de programacion</title>
     <link rel="stylesheet" href="Estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <h1>Circulo</h1>
     <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
     
     <div class="contenedor">
-        <div class="tarjeta" onclick="mostrarFormulario('areaCirculo')">
-            <div class="figura circulo"></div>
+        <div class="tarjeta">
             <h3 class="titulo">Area de un circulo</h3>
+            <img src="Img/areacirculo2.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('areaCirculo')">
+            
             <div id="formularioAreaCirculo" class="formulario">
                 <label for="radio">Ingrese el Radio:</label>
-                <input type="number" id="radio" class="imput">
+                <input type="number" id="radioArea" class="imput">
                 <button class="boton" onclick="calcularArea('circulo')">Calcular</button>
-                <p class="titulo" id="resultado"></p>
+                <p class="titulo" id="resultadoAreaCirculo"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('areaCirculo')">
             </div>
         </div>
         <div class="tarjeta">
-            <div class="figura circulo"></div>
             <h3 class="titulo">Perimetro de un circulo</h3>
+            <img src="Img/perimetrocirculo1.png" alt="PerimetroCirculo" class="tarjetaImg" onclick="mostrarFormulario('perimetroCirculo')">
+            <div id="formularioPerimetroCirculo" class="formulario">
+                <label for="radio2">Ingrese el Radio:</label>
+                <input type="number" id="radioPerimetro" class="imput">
+                <button class="boton" onclick="calcularPerimetro('circulo')">Calcular</button>
+                <p class="titulo" id="resultadoPerimetroCirculo"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetroCirculo')">
+            </div>
         </div>
        
     </div>
