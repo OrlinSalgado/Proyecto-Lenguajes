@@ -28,7 +28,22 @@
                 <p class="titulo" id="resultadoAreaRectangulo"></p>
             </div>
         </div>
-        
+        <div class="tarjeta" onclick="mostrarFormulario('perimetroRectangulo')">
+            <div class="figura rectangulo"></div>
+            <h3 class="titulo">Perimetro de un Rectangulo</h3>
+            <div id="formularioPerimetroRectangulo" class="formulario">
+                <div>
+                    <label for="altura">Ingrese la Altura(h):</label>
+                    <input type="number" id="alturaRectangulo1" class="imput">
+                </div>
+                <div>
+                    <label for="altura">Ingrese el ancho (B):</label>
+                    <input type="number" id="anchoRectangulo1" class="imput">
+                </div>
+                <button class="boton" onclick="calcularPerimetro('rectangulo')">Calcular</button>
+                <p class="titulo" id="resultadoPerimetroRectangulo"></p>
+            </div>
+        </div>
        
     </div>
     

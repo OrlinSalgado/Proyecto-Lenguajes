@@ -22,6 +22,15 @@ function ocultarFormulario(tipo) {
   else if (tipo=='perimetroCirculo') {
     document.getElementById("formularioPerimetroCirculo").style.display = "none";
   }
+  else if(tipo=='perimetroRectangulo'){
+    document.getElementById("formularioPerimetroRectangulo").style.display = "block";
+  }
+  else if(tipo=='areaRombo'){
+    document.getElementById("formularioAreaRombo").style.display = "block";
+  } 
+  else if(tipo=='perimetroRombo'){
+    document.getElementById("formularioPerimetroRombo").style.display = "block";
+  } 
 }
 
 function calcularArea(tipo) {
@@ -50,5 +59,32 @@ function calcularPerimetro(tipo) {
     }
     let perimetro = 2 * Math.PI * radio;
     document.getElementById("resultadoPerimetroCirculo").innerHTML = "El Perímetro es: " + perimetro.toFixed(2);
+  }
+}
+  else if(tipo == 'rombo'){
+    let altura = document.getElementById("alturaRombo").value;
+    let lado = document.getElementById("ladoRombo").value;
+    let areaRombo = altura*lado;
+    document.getElementById("resultado").innerHTML = "El Área es: " + areaRombo.toFixed(2);
+  }
+}
+function calcularPerimetro(tipo){
+  if (tipo == 'circulo'){
+    let radio = document.getElementById("radio1").value;
+    let perimetro = 2*(Math.PI * radio);
+    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
+  }
+  else if(tipo == 'rectangulo'){
+    let altura = document.getElementById("alturaRectangulo1").value;
+    let ancho = document.getElementById("anchoRectangulo1").value;
+    altura = Number(altura);
+    ancho = Number(ancho);
+    let perimetroRectangulo = 2*(altura+ancho);
+    document.getElementById("resultadoPerimetroRectangulo").innerHTML = "El Perimetro es: " + perimetroRectangulo.toFixed(2);
+  }
+  else if (tipo == 'rombo'){
+    let lado = document.getElementById("ladoRombo1").value;
+    let perimetro = 4*lado;
+    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
   }
 }
