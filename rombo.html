@@ -15,30 +15,30 @@
     <div class="contenedor">
         <div class="tarjeta">
             <h3 class="titulo">Área de un rombo</h3>
-            <img src="Img/area-rombo.jpg" alt="ÁreaRombo" class="tarjetaImg" onclick="mostrarFormulario('formularioAreaRombo')">
-            <div id="formularioAreaRombo" class="formulario">
+            <img src="Img/arearombo.png" alt="ÁreaRombo" class="tarjetaImg" onclick="mostrarFormulario('area')">
+            <div id="formularioArea" class="formulario">
                 <div>
-                    <label for="altura">Ingrese la altura(h):</label>
-                    <input type="number" min="0" id="alturaRombo" class="imput">
+                    <label for="altura">Ingrese la altura (h):</label>
+                    <input type="number" id="alturaRombo" class="imput">
                 </div>
                 <div>
                     <label for="altura">Ingrese el lado (a):</label>
-                    <input type="number" min="0" id="ladoRombo" class="imput">
+                    <input type="number" id="ladoRombo" class="imput">
                 </div>
                 <button class="boton" onclick="calcularArea('rombo')">Calcular</button>
-                <p class="titulo" id="resultadoAreaRombo"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioAreaRombo')">
+                <p class="titulo" id="resultado"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('area')">
             </div>
         </div>
         <div class="tarjeta">            
-            <h3 class="titulo">Perimetro de un rombo</h3>
-            <img src="Img/rombo_perimetro.png" alt="PerimetroRombo" class="tarjetaImg" onclick="mostrarFormulario('formularioPerimetroRombo')">
-            <div id="formularioPerimetroRombo" class="formulario">
+            <h3 class="titulo">Perímetro de un rombo</h3>
+            <img src="Img/perimetrorombo.png" alt="PerimetroRombo" class="tarjetaImg" onclick="mostrarFormulario('perimetro')">
+            <div id="formularioPerimetro" class="formulario">
                 <label for="altura">Ingrese el lado (a):</label>
-                <input type="number" min="0" id="ladoRombo1" class="imput">
+                <input type="number" id="ladoRombo1" class="imput">
                 <button class="boton" onclick="calcularPerimetro('rombo')">Calcular</button>
-                <p class="titulo" id="resultadoPerimetroRombo"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioPerimetroRombo')">
+                <p class="titulo" id="resultado1"></p>
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetro')">
             </div>
         </div>
        
