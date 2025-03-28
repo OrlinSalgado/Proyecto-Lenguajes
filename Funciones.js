@@ -1,3 +1,8 @@
+function limpiar(formularioId) {
+  document.querySelectorAll(`#${formularioId} input`).forEach(input => input.value = "");
+  document.querySelectorAll(`#${formularioId} p`).forEach(p => p.textContent = "");
+}
+
 function mostrarFormulario(tipo) {
   if(tipo=='area'){
     document.getElementById("formularioArea").style.display = "block";
