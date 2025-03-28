@@ -14,42 +14,42 @@
     
     <div class="contenedor">
         <div class="tarjeta">
-            <h3 class="titulo">Area de un triángulo escaleno</h3>
-            <img src="Img/areaEscaleno2.png" alt="AreaTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('formularioAreaTrianguloEscaleno')">
+            <h3 class="titulo">Área de un triángulo escaleno</h3>
+            <img src="Img/areaEscaleno2.png" alt="AreaTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('area')">
             
-            <div id="formularioAreaTrianguloEscaleno" class="formulario">
+            <div id="formularioArea" class="formulario">
                 <div>
-                    <label for="alturaTrianguloEscaleno">Ingrese la Altura(h):</label>
+                    <label for="alturaTrianguloEscaleno">Ingrese la altura (h):</label>
                     <input type="number" id="alturaTrianguloEscaleno" class="imput">
                 </div>
                 <div>
-                    <label for="baseTrianguloEscaleno">Ingrese el Base (b):</label>
-                    <input type="number" min="0" id="baseTrianguloEscaleno" class="imput">
+                    <label for="baseTrianguloEscaleno">Ingrese la base (b):</label>
+                    <input type="number" id="baseTrianguloEscaleno" class="imput">
                 </div>
                 <button class="boton" onclick="calcularArea('triangulo-Escaleno')">Calcular</button>
                 <p class="titulo" id="resultadoAreaTrianguloEscaleno"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioAreaTrianguloEscaleno')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('area')">
             </div>
         </div>
         <div class="tarjeta">
-            <h3 class="titulo">Perimetro de un triángulo escaleno</h3>
-            <img src="Img/perimetroEscaleno2.png" alt="PerimetroTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('formularioPerimetroTrianguloEscaleno')">
+            <h3 class="titulo">Perímetro de un triángulo escaleno</h3>
+            <img src="Img/perimetroEscaleno2.png" alt="PerimetroTriánguloEscaleno" class="tarjetaImg" onclick="mostrarFormulario('perimetro')">
             
-            <div id="formularioPerimetroTrianguloEscaleno" class="formulario">
+            <div id="formularioPerimetro" class="formulario">
                 <div>
-                    <label for="LadoA">Ingrese la LadoA(LA):</label>
-                    <input type="number" min="0" id="ladoATrianguloEscaleno" class="imput">
+                    <label for="LadoA">Ingrese el lado 1 (L1):</label>
+                    <input type="number" id="ladoATrianguloEscaleno" class="imput">
                 </div>
                 <div>
-                    <label for="LadoB">Ingrese el LadoB(LB):</label>
-                    <input type="number" min="0" id="ladoBTrianguloEscaleno" class="imput">
+                    <label for="LadoB">Ingrese el lado 2 (L2):</label>
+                    <input type="number" id="ladoBTrianguloEscaleno" class="imput">
                 </div><div>
-                    <label for="LadoC">Ingrese la LadoC(LC):</label>
-                    <input type="number" min="0" id="ladoCTrianguloEscaleno" class="imput">
+                    <label for="LadoC">Ingrese el lado 3 (L3):</label>
+                    <input type="number" id="ladoCTrianguloEscaleno" class="imput">
                 </div>
                 <button class="boton" onclick="calcularPerimetro('triangulo-Escaleno')">Calcular</button>
                 <p class="titulo" id="resultadoPerimetroTrianguloEscaleno"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioPerimetroTrianguloEscaleno')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetro')">
             </div>
         </div>
     </div>
