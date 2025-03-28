@@ -14,37 +14,37 @@
     
     <div class="contenedor">
         <div class="tarjeta">
-            <h3 class="titulo">Área de un Rectángulo</h3>
-            <img src="Img/AreaRectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('formularioAreaRectangulo')">
-            <div id="formularioAreaRectangulo" class="formulario">
+            <h3 class="titulo">Área de un rectángulo</h3>
+            <img src="Img/AreaRectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('area')">
+            <div id="formularioArea" class="formulario">
                 <div>
-                    <label for="altura">Ingrese la Altura(h):</label>
-                    <input type="number" min="0" id="alturaRectangulo" class="imput">
+                    <label for="altura">Ingrese la altura (h):</label>
+                    <input type="number" id="alturaRectangulo" class="imput">
                 </div>
                 <div>
                     <label for="altura">Ingrese el ancho (B):</label>
-                    <input type="number" min="0" id="anchoRectangulo" class="imput">
+                    <input type="number" id="anchoRectangulo" class="imput">
                 </div>
                 <button class="boton" onclick="calcularArea('rectangulo')">Calcular</button>
                 <p class="titulo" id="resultadoAreaRectangulo"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioAreaRectangulo')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('area')">
             </div>
         </div>
         <div class="tarjeta">
-            <h3 class="titulo">Perimetro de un Rectángulo</h3>
-            <img src="Img/perimetroRectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('formularioPerimetroRectangulo')">
-            <div id="formularioPerimetroRectangulo" class="formulario">
+            <h3 class="titulo">Perímetro de un rectángulo</h3>
+            <img src="Img/perimetroRectangulo.png" alt="AreaCirculo" class="tarjetaImg" onclick="mostrarFormulario('perimetro')">
+            <div id="formularioPerimetro" class="formulario">
                 <div>
-                    <label for="altura">Ingrese la Altura(h):</label>
-                    <input type="number" min="0" id="alturaRectangulo1" class="imput">
+                    <label for="altura">Ingrese la altura (h):</label>
+                    <input type="number" id="alturaRectangulo1" class="imput">
                 </div>
                 <div>
                     <label for="altura">Ingrese el ancho (B):</label>
-                    <input type="number" min="0" id="anchoRectangulo1" class="imput">
+                    <input type="number" id="anchoRectangulo1" class="imput">
                 </div>
                 <button class="boton" onclick="calcularPerimetro('rectangulo')">Calcular</button>
                 <p class="titulo" id="resultadoPerimetroRectangulo"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioPerimetroRectangulo')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetro')">
             </div>
         </div>
        
