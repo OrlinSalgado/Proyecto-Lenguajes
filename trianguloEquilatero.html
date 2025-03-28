@@ -9,32 +9,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Triángulo Equilatero</h1>
+    <h1>Triángulo Equilátero</h1>
     <p class="subtitulo">selecciona una opcion dando clic en la figura</p>
     
     <div class="contenedor">
         <div class="tarjeta">
-            <h3 class="titulo">Area de un triángulo equilatero</h3>
-            <img src="Img/areaEquilatero1.png" alt="AreaTriánguloEquilatero" class="tarjetaImg" onclick="mostrarFormulario('formularioAreaTrianguloEquilatero')">
+            <h3 class="titulo">Área de un triángulo equilátero</h3>
+            <img src="Img/areaEquilatero1.png" alt="AreaTriánguloEquilatero" class="tarjetaImg" onclick="mostrarFormulario('area')">
             
-            <div id="formularioAreaTrianguloEquilatero" class="formulario">
-                <label for="Lado">Ingrese el lado(L):</label>
-                <input type="number" min="0" id="ladoAreaTrianguloEquilatero" class="imput">
+            <div id="formularioArea" class="formulario">
+                <label for="Lado">Ingrese el lado (a):</label>
+                <input type="number" id="ladoAreaTrianguloEquilatero" class="imput">
                 <button class="boton" onclick="calcularArea('triangulo-Equilatero')">Calcular</button>
                 <p class="titulo" id="resultadoAreaTrianguloEquilatero"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioAreaTrianguloEquilatero')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('area')">
             </div>
         </div>
         <div class="tarjeta">
-            <h3 class="titulo">Perimetro de un triángulo equilatero</h3>
-            <img src="Img/perimetroEquilatero1.png" alt="PerimetroTriánguloEquilatero" class="tarjetaImg" onclick="mostrarFormulario('formularioPerimetroTrianguloEquilatero')">
+            <h3 class="titulo">Perímetro de un triángulo equilátero</h3>
+            <img src="Img/perimetroEquilatero1.png" alt="PerimetroTriánguloEquilatero" class="tarjetaImg" onclick="mostrarFormulario('perimetro')">
             
-            <div id="formularioPerimetroTrianguloEquilatero" class="formulario">
-                <label for="Lado">Ingrese el lado(L):</label>
-                <input type="number" min="0" id="ladoPerimetroTrianguloEquilatero" class="imput">
+            <div id="formularioPerimetro" class="formulario">
+                <label for="Lado">Ingrese el lado (a):</label>
+                <input type="number" id="ladoPerimetroTrianguloEquilatero" class="imput">
                 <button class="boton" onclick="calcularPerimetro('triangulo-Equilatero')">Calcular</button>
                 <p class="titulo" id="resultadoPerimetroTrianguloEquilatero"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioPerimetroTrianguloEquilatero')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetro')">
             </div>
         </div>
     </div>
