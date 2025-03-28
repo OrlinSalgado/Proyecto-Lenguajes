@@ -1,14 +1,19 @@
 function mostrarFormulario(tipo) {
-  
-  document.getElementById(tipo).style.display = "block";
-  
+  if(tipo=='area'){
+    document.getElementById("formularioArea").style.display = "block";
+  }
+  else if(tipo=='perimetro'){
+    document.getElementById("formularioPerimetro").style.display = "block";
+  }
 }
 
-
 function ocultarFormulario(tipo) {
-    
-  document.getElementById(tipo).style.display = "none";
-  
+  if(tipo=='area'){
+    document.getElementById("formularioArea").style.display = "none";
+  }
+  else if (tipo=='perimetro') {
+    document.getElementById("formularioPerimetro").style.display = "none";
+  }
 }
 
 function calcularArea(tipo) {
