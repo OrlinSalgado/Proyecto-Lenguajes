@@ -15,37 +15,37 @@
     <div class="contenedor">
         <div class="tarjeta">
             <h3 class="titulo">Area de un triángulo isósceles</h3>
-            <img src="Img/areaTrianguloIsosceles.png" alt="AreaTriánguloIsosceles" class="tarjetaImg" onclick="mostrarFormulario('areaTrianguloIsosceles')">
+            <img src="Img/areaTrianguloIsosceles.png" alt="AreaTriánguloIsosceles" class="tarjetaImg" onclick="mostrarFormulario('formularioAreaTrianguloIsosceles')">
             <div id="formularioAreaTrianguloIsosceles" class="formulario">
                 <div>
                     <label for="altura">Ingrese la Altura(h):</label>
-                    <input type="number" id="alturaTrianguloIsosceles" class="imput">
+                    <input type="number" min="0" id="alturaTrianguloIsosceles" class="imput">
                 </div>
                 <div>
                     <label for="altura">Ingrese el Base (B):</label>
-                    <input type="number" id="baseTrianguloIsosceles" class="imput">
+                    <input type="number" min="0" id="baseTrianguloIsosceles" class="imput">
                 </div>
                 <button class="boton" onclick="calcularArea('triangulo-Isosceles')">Calcular</button>
                 <p class="titulo" id="resultadoAreaTrianguloIsosceles"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('areaTrianguloIsosceles')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioAreaTrianguloIsosceles')">
             </div>
         </div>
         <div class="tarjeta">
             <h3 class="titulo">Perimetro de un triángulo isósceles</h3>
-            <img src="Img/perimetro-de-un-triangulo-isosceles.png" alt="PerimetroTriánguloIsosceles" class="tarjetaImg" onclick="mostrarFormulario('perimetroTrianguloIsosceles')">
+            <img src="Img/perimetro-de-un-triangulo-isosceles.png" alt="PerimetroTriánguloIsosceles" class="tarjetaImg" onclick="mostrarFormulario('formularioPerimetroTrianguloIsosceles')">
             
             <div id="formularioPerimetroTrianguloIsosceles" class="formulario">
                 <div>
                     <label for="altura">Ingrese la LadoA(LA):</label>
-                    <input type="number" id="ladoATrianguloIsosceles" class="imput">
+                    <input type="number" min="0" id="ladoATrianguloIsosceles" class="imput">
                 </div>
                 <div>
                     <label for="altura">Ingrese el LadoB (LB):</label>
-                    <input type="number" id="ladoBTrianguloIsosceles" class="imput">
+                    <input type="number" min="0" id="ladoBTrianguloIsosceles" class="imput">
                 </div>
                 <button class="boton" onclick="calcularPerimetro('triangulo-Isosceles')">Calcular</button>
                 <p class="titulo" id="resultadoPerimetroTrianguloIsosceles"></p>
-                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('perimetroTrianguloIsosceles')">
+                <img src="Img/oculto.png" alt="ocultar" class="icono" onclick="ocultarFormulario('formularioPerimetroTrianguloIsosceles')">
             </div>
         </div>
     </div>

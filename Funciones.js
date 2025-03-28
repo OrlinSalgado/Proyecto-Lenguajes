@@ -1,92 +1,14 @@
 function mostrarFormulario(tipo) {
-  if(tipo=='areaCirculo'){
-    document.getElementById("formularioAreaCirculo").style.display = "block";
-  }
-  else if(tipo=='perimetroCirculo'){
-    document.getElementById("formularioPerimetroCirculo").style.display = "block";
-  }
-  else if(tipo=='areaRectangulo'){
-    document.getElementById("formularioAreaRectangulo").style.display = "block";
-  }
-  else if(tipo=='perimetroRectangulo'){
-    document.getElementById("formularioPerimetroRectangulo").style.display = "block";
-  }
-  else if(tipo=='areaRombo'){
-    document.getElementById("formularioAreaRombo").style.display = "block";
-  } 
-  else if(tipo=='perimetroRombo'){
-    document.getElementById("formularioPerimetroRombo").style.display = "block";
-  } 
-  else if(tipo=='areaTRectangulo'){
-    document.getElementById("formularioAreaTRectangulo").style.display = "block";
-  }
-  else if(tipo=='perimetroTRectangulo'){
-    document.getElementById("formularioPerimetroTRectangulo").style.display = "block";
-  }
-  else if(tipo=='areaTrianguloIsosceles'){
-    document.getElementById("formularioAreaTrianguloIsosceles").style.display = "block";
-  }
-  else if(tipo=='perimetroTrianguloIsosceles'){
-    document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "block";
-  }
-  else if(tipo=='areaTrianguloEquilatero'){
-    document.getElementById("formularioAreaTrianguloEquilatero").style.display = "block";
-  }
-  else if(tipo=='perimetroTrianguloEquilatero'){
-    document.getElementById("formularioPerimetroTrianguloEquilatero").style.display = "block";
-  }
-  else if(tipo=='areaTrianguloEscaleno'){
-    document.getElementById("formularioAreaTrianguloEscaleno").style.display = "block";
-  }
-  else if(tipo=='perimetroTrianguloEscaleno'){
-    document.getElementById("formularioPerimetroTrianguloEscaleno").style.display = "block";
-  }
+  
+  document.getElementById(tipo).style.display = "block";
+  
 }
 
 
 function ocultarFormulario(tipo) {
-  if(tipo=='areaCirculo'){
-    document.getElementById("formularioAreaCirculo").style.display = "none";
-  }
-  else if (tipo=='perimetroCirculo') {
-    document.getElementById("formularioPerimetroCirculo").style.display = "none";
-  }
-  else if (tipo=='areaTRectangulo') {
-    document.getElementById("formularioAreaTRectangulo").style.display = "none";
-  }
-  else if (tipo=='perimetroTRectangulo') {
-    document.getElementById("formularioPerimetroTRectangulo").style.display = "none";
-  }
-  else if (tipo=='areaRectangulo') {
-    document.getElementById("formularioAreaRectangulo").style.display = "none";
-  }
-  else if (tipo=='perimetroRectangulo') {
-    document.getElementById("formularioPerimetroRectangulo").style.display = "none";
-  }
-  else if (tipo=='areaRombo') {
-    document.getElementById("formularioAreaRombo").style.display = "none";
-  }
-  else if (tipo=='perimetroRombo') {
-    document.getElementById("formularioPerimetroRombo").style.display = "none";
-  }
-  else if (tipo=='areaTrianguloIsosceles') {
-    document.getElementById("formularioAreaTrianguloIsosceles").style.display = "none";
-  }
-  else if (tipo=='perimetroTrianguloIsosceles') {
-    document.getElementById("formularioPerimetroTrianguloIsosceles").style.display = "none";
-  }
-  else if (tipo=='areaTrianguloEquilatero') {
-    document.getElementById("formularioAreaTrianguloEquilatero").style.display = "none";
-  }
-  else if (tipo=='perimetroTrianguloEquilatero') {
-    document.getElementById("formularioPerimetroTrianguloEquilatero").style.display = "none";
-  }
-  else if (tipo=='areaTrianguloEscaleno') {
-    document.getElementById("formularioAreaTrianguloEscaleno").style.display = "none";
-  }
-  else if (tipo=='perimetroTrianguloEscaleno') {
-    document.getElementById("formularioPerimetroTrianguloEscaleno").style.display = "none";
-  }
+    
+  document.getElementById(tipo).style.display = "none";
+  
 }
 
 function calcularArea(tipo) {
@@ -102,12 +24,20 @@ function calcularArea(tipo) {
   else if(tipo == 'rombo'){
     let altura = document.getElementById("alturaRombo").value;
     let lado = document.getElementById("ladoRombo").value;
+    if (altura <= 0 || lado <= 0) {
+      document.getElementById("resultadoAreaRombo").innerHTML = "Ingrese un valor válido.";
+      return;
+    }
     let areaRombo = altura*lado;
-    document.getElementById("resultado").innerHTML = "El Área es: " + areaRombo.toFixed(2);
+    document.getElementById("resultadoAreaRombo").innerHTML = "El Área es: " + areaRombo.toFixed(2);
   }
   else if(tipo == 'rectangulo'){
     let altura = document.getElementById("alturaRectangulo").value;
     let ancho = document.getElementById("anchoRectangulo").value;
+    if (altura <= 0 || ancho <= 0) {
+      document.getElementById("resultadoAreaRectangulo").innerHTML = "Ingrese un valor válido.";
+      return;
+    }
     let areaRectangulo = altura*ancho;
     document.getElementById("resultadoAreaRectangulo").innerHTML = "El Área es: " + areaRectangulo.toFixed(2);
   }
@@ -118,7 +48,7 @@ function calcularArea(tipo) {
     cateto1 = Number(cateto1);
     cateto2 = Number(cateto2);
     
-    if (isNaN(cateto1) || isNaN(cateto2)) {
+    if (cateto1 <= 0 || cateto2 <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los catetos.");
     } else {
         let areaTr = (cateto1*cateto2)/2;
@@ -132,7 +62,7 @@ function calcularArea(tipo) {
     alturaTrianguloIsosceles = Number(alturaTrianguloIsosceles);
     baseTrianguloIsosceles = Number(baseTrianguloIsosceles);
     
-    if (isNaN(alturaTrianguloIsosceles) || isNaN(alturaTrianguloIsosceles)) {
+    if (alturaTrianguloIsosceles <= 0 || alturaTrianguloIsosceles <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los catetos.");
     } else {
         let areaTrianguloIsosceles = (alturaTrianguloIsosceles*baseTrianguloIsosceles)/2;
@@ -144,7 +74,7 @@ function calcularArea(tipo) {
     
     lado = Number(lado);
     
-    if (isNaN(lado)) {
+    if (lado <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los lados.");
     }
     else {
@@ -159,7 +89,7 @@ function calcularArea(tipo) {
     alturaTrianguloEscaleno = Number(alturaTrianguloEscaleno);
     baseTrianguloEscaleno = Number(baseTrianguloEscaleno);
 
-    if (isNaN(alturaTrianguloEscaleno) || isNaN(baseTrianguloEscaleno)) {
+    if (alturaTrianguloEscaleno <= 0  || baseTrianguloEscaleno <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los catetos.");
     } else {
         let areaTrianguloEscaleno = (alturaTrianguloEscaleno*baseTrianguloEscaleno)/2;
@@ -183,13 +113,21 @@ function calcularPerimetro(tipo){
     let ancho = document.getElementById("anchoRectangulo1").value;
     altura = Number(altura);
     ancho = Number(ancho);
+    if (altura <= 0 || ancho <= 0) {
+      document.getElementById("resultadoPerimetroRectangulo").innerHTML = "Ingrese un valor válido.";
+      return;
+    }
     let perimetroRectangulo = 2*(altura+ancho);
     document.getElementById("resultadoPerimetroRectangulo").innerHTML = "El Perimetro es: " + perimetroRectangulo.toFixed(2);
   }
   else if (tipo == 'rombo'){
     let lado = document.getElementById("ladoRombo1").value;
+    if (lado <= 0) {
+      document.getElementById("resultadoPerimetroRombo").innerHTML = "Ingrese un valor válido.";
+      return;
+    }
     let perimetro = 4*lado;
-    document.getElementById("resultado1").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
+    document.getElementById("resultadoPerimetroRombo").innerHTML = "El Perimetro es: " + perimetro.toFixed(2);
   }
   else if(tipo=='Trectangulo'){
     let cateto1 = document.getElementById("cateto1").value;
@@ -198,7 +136,7 @@ function calcularPerimetro(tipo){
     cateto1 = Number(cateto1);
     cateto2 = Number(cateto2);
     
-    if (isNaN(cateto1) || isNaN(cateto2)) {
+    if (cateto1 <= 0 || cateto2 <=0 ) {
         alert("Por favor, ingresa valores numéricos válidos para los catetos.");
     } else {
         let c = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
@@ -213,7 +151,7 @@ function calcularPerimetro(tipo){
     ladoATrianguloIsosceles = Number(ladoATrianguloIsosceles);
     ladoBTrianguloIsosceles = Number(ladoBTrianguloIsosceles);
     
-    if (isNaN(ladoATrianguloIsosceles) || isNaN(ladoBTrianguloIsosceles)) {
+    if (ladoATrianguloIsosceles <= 0 || ladoBTrianguloIsosceles <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los lados.");
     } else {
         let perimetroTrianguloIsosceles = 2*(ladoATrianguloIsosceles) + (ladoBTrianguloIsosceles);
@@ -225,7 +163,7 @@ function calcularPerimetro(tipo){
     
     lado = Number(lado);
     
-    if (isNaN(lado)) {
+    if (lado <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los lados.");
     }
     else {
@@ -242,7 +180,7 @@ function calcularPerimetro(tipo){
     ladoB = Number(ladoB);
     ladoC = Number(ladoC);
     
-    if (isNaN(ladoA) || isNaN(ladoB) || isNaN(ladoC)) {
+    if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
         alert("Por favor, ingresa valores numéricos válidos para los lados.");
     }
     else {

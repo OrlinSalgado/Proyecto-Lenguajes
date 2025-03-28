@@ -5,7 +5,8 @@
     font-family: 'Poppins', sans-serif;
 }
 body {
-    background-color: #2dc27a;
+    /*background-color: #2dc27a;*/
+    background: linear-gradient(to right, #2dc27a, #46f9e1);
     color: white;
     text-align: center;
     padding: 40px 20px;
