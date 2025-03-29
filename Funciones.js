@@ -67,7 +67,7 @@ function calcularArea(tipo) {
     let altura = document.getElementById("alturaRectangulo").value;
     let ancho = document.getElementById("anchoRectangulo").value;
     if (altura <= 0 || ancho <= 0) {
-      document.getElementById("resultadoAreaRectangulo").innerHTML = "Ingrese un valor válido.";
+      document.getElementById("resultadoAreaRectangulo").innerHTML = "Ingrese valores válidos.";
       return;
     }
     let areaRectangulo = altura*ancho;
@@ -146,7 +146,7 @@ function calcularPerimetro(tipo){
     altura = Number(altura);
     ancho = Number(ancho);
     if (altura <= 0 || ancho <= 0) {
-      document.getElementById("resultadoPerimetroRectangulo").innerHTML = "Ingrese un valor válido.";
+      document.getElementById("resultadoPerimetroRectangulo").innerHTML = "Ingrese valores válidos.";
       return;
     }
     let perimetroRectangulo = 2*(altura+ancho);
