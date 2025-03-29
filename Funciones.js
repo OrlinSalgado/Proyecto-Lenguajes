@@ -1,3 +1,25 @@
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.getElementById("footer");
+
+  const mensajes = ["Ángel Hernández", "Daniel Ortiz", "Nelson González", "Orlin Salgado"];
+  let index = 0;
+
+  function actualizarFooter() {
+      const year = new Date().getFullYear();
+      footer.innerHTML = `
+          <footer>
+              <p><strong>Grupo E</strong></p>
+              <p>Derechos Reservados &copy; ${year}</p>
+              <p>${mensajes[index]}</p>
+          </footer>
+      `;
+      index = (index + 1) % mensajes.length;
+  }
+
+  actualizarFooter();
+  setInterval(actualizarFooter, 3000);
+});
+
 function limpiar(formularioId) {
   document.querySelectorAll(`#${formularioId} input`).forEach(input => input.value = "");
   document.querySelectorAll(`#${formularioId} p`).forEach(p => p.textContent = "");
