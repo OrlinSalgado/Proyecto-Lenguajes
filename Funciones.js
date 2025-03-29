@@ -53,6 +53,16 @@ function calcularArea(tipo) {
     let area = Math.PI * Math.pow(radio, 2);
     document.getElementById("resultadoAreaCirculo").innerHTML = "El área es: " + area.toFixed(2);
   }
+    else if (tipo == 'elipse') {
+    let ejemayor = document.getElementById("ejemayor").value;
+    let ejemenor = document.getElementById("ejemenor").value;
+    if (ejemayor <= 0 || ejemenor <= 0) {
+      document.getElementById("resultadoElipse").innerHTML = "Ingrese valores válidos.";
+      return;
+    }
+    let areaelipse = Math.PI * (ejemayor * ejemenor);
+    document.getElementById("resultadoElipse").innerHTML = "El área es: " + areaelipse.toFixed(2);
+  }
   else if(tipo == 'rombo'){
     let altura = document.getElementById("alturaRombo").value;
     let lado = document.getElementById("ladoRombo").value;
@@ -139,6 +149,18 @@ function calcularPerimetro(tipo){
     }
     let perimetro = 2 * Math.PI * radio;
     document.getElementById("resultadoPerimetroCirculo").innerHTML = "El perímetro es: " + perimetro.toFixed(2);
+  }
+    else if (tipo == 'elipse') {
+    let ejemayor = document.getElementById("ejemayor1").value;
+    let ejemenor = document.getElementById("ejemenor1").value;
+    ejemayor = Number(ejemayor);
+    ejemenor = Number(ejemenor);
+    if (ejemayor <= 0 || ejemenor <= 0) {
+      document.getElementById("resultadoPerimetroElipse").innerHTML = "Ingrese valores válidos.";
+      return;
+    }
+    let perimetroelipse = Math.PI * (3 * (ejemayor + ejemenor) - Math.sqrt((3 * ejemayor + ejemenor) * (ejemayor + 3 * ejemenor)));
+    document.getElementById("resultadoPerimetroElipse").innerHTML = "El perímetro es: " + perimetroelipse.toFixed(2);
   }
   else if(tipo == 'rectangulo'){
     let altura = document.getElementById("alturaRectangulo1").value;
