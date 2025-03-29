@@ -220,3 +220,17 @@ input:focus {
     transform: scale(1.1);
     opacity: 0.9;
 }
+
+/* Efecto de zoom al colocar el puntero */
+.triangulo:hover,
+.triangulo-Isosceles:hover,
+.triangulo-Equilatero:hover,
+.triangulo-Escaleno:hover,
+.triangulo-Rectangulo:hover,
+.circulo:hover,
+.elipse:hover,
+.rectangulo:hover,
+.rombo:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
