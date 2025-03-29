@@ -57,7 +57,7 @@ function calcularArea(tipo) {
     let altura = document.getElementById("alturaRombo").value;
     let lado = document.getElementById("ladoRombo").value;
     if (altura <= 0 || lado <= 0) {
-      document.getElementById("resultadoAreaRombo").innerHTML = "Ingrese un valor válido.";
+      document.getElementById("resultadoAreaRombo").innerHTML = "Ingrese valores válidos.";
       return;
     }
     let areaRombo = altura*lado;
