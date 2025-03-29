@@ -47,7 +47,7 @@ function calcularArea(tipo) {
   if (tipo == 'circulo') {
     let radio = document.getElementById("radioArea").value;
     if (radio <= 0) {
-      document.getElementById("resultadoAreaCirculo").innerHTML = "Ingrese un radio válido.";
+      document.getElementById("resultadoAreaCirculo").innerHTML = "Ingrese un valor válido.";
       return;
     }
     let area = Math.PI * Math.pow(radio, 2);
@@ -134,7 +134,7 @@ function calcularPerimetro(tipo){
   if (tipo == 'circulo') {
     let radio = document.getElementById("radioPerimetro").value;
     if (radio <= 0) {
-        document.getElementById("resultadoPerimetroCirculo").innerHTML = "Ingrese un radio válido.";
+        document.getElementById("resultadoPerimetroCirculo").innerHTML = "Ingrese un valor válido.";
         return;
     }
     let perimetro = 2 * Math.PI * radio;
