@@ -81,7 +81,7 @@ function calcularArea(tipo) {
     cateto2 = Number(cateto2);
     
     if (cateto1 <= 0 || cateto2 <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+      document.getElementById("AreaTRectangulo").innerHTML = "Ingrese valores válidos";
     } else {
         let areaTr = (cateto1*cateto2)/2;
         document.getElementById("AreaTRectangulo").innerHTML = "El área es: " + areaTr.toFixed(2);
@@ -95,7 +95,7 @@ function calcularArea(tipo) {
     baseTrianguloIsosceles = Number(baseTrianguloIsosceles);
     
     if (alturaTrianguloIsosceles <= 0 || alturaTrianguloIsosceles <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+      document.getElementById("resultadoAreaTrianguloIsosceles").innerHTML = "Ingrese valores válidos" ;
     } else {
         let areaTrianguloIsosceles = (alturaTrianguloIsosceles*baseTrianguloIsosceles)/2;
         document.getElementById("resultadoAreaTrianguloIsosceles").innerHTML = "El área es: " + areaTrianguloIsosceles.toFixed(2);
@@ -107,7 +107,7 @@ function calcularArea(tipo) {
     lado = Number(lado);
     
     if (lado <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+      document.getElementById("resultadoAreaTrianguloEquilatero").innerHTML = "Ingrese un valor válido";
     }
     else {
         let areaTrianguloEquilatero = (Math.sqrt(3)/4)*Math.pow(lado, 2);
@@ -122,7 +122,7 @@ function calcularArea(tipo) {
     baseTrianguloEscaleno = Number(baseTrianguloEscaleno);
 
     if (alturaTrianguloEscaleno <= 0  || baseTrianguloEscaleno <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+      document.getElementById("resultadoAreaTrianguloEscaleno").innerHTML = "Ingrese valores válidos";
     } else {
         let areaTrianguloEscaleno = (alturaTrianguloEscaleno*baseTrianguloEscaleno)/2;
         document.getElementById("resultadoAreaTrianguloEscaleno").innerHTML = "El área es: " + areaTrianguloEscaleno.toFixed(2);
@@ -169,7 +169,7 @@ function calcularPerimetro(tipo){
     cateto2 = Number(cateto2);
     
     if (cateto1 <= 0 || cateto2 <=0 ) {
-        alert("Por favor, ingresa valores numéricos válidos para los catetos.");
+      document.getElementById("PerimetroTRectangulo").innerHTML = "Ingrese valores válidos";
     } else {
         let c = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
         let perimetroTr = cateto1 + cateto2 + c;
@@ -184,7 +184,7 @@ function calcularPerimetro(tipo){
     ladoBTrianguloIsosceles = Number(ladoBTrianguloIsosceles);
     
     if (ladoATrianguloIsosceles <= 0 || ladoBTrianguloIsosceles <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+      document.getElementById("resultadoPerimetroTrianguloIsosceles").innerHTML = "Ingrese valores válidos";
     } else {
         let perimetroTrianguloIsosceles = 2*(ladoATrianguloIsosceles) + (ladoBTrianguloIsosceles);
         document.getElementById("resultadoPerimetroTrianguloIsosceles").innerHTML = "El perímetro es: " + perimetroTrianguloIsosceles.toFixed(2);
@@ -196,7 +196,7 @@ function calcularPerimetro(tipo){
     lado = Number(lado);
     
     if (lado <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+      document.getElementById("resultadoPerimetroTrianguloEquilatero").innerHTML = "Ingrese un valor válido";
     }
     else {
         let perimetroTrianguloEquilatero = 3*lado;
@@ -213,7 +213,7 @@ function calcularPerimetro(tipo){
     ladoC = Number(ladoC);
     
     if (ladoA <= 0 || ladoB <= 0 || ladoC <= 0) {
-        alert("Por favor, ingresa valores numéricos válidos para los lados.");
+      document.getElementById("resultadoPerimetroTrianguloEscaleno").innerHTML = "Ingrese valores válidos";
     }
     else {
         let perimetroTrianguloEscaleno = ladoA + ladoB + ladoC;
